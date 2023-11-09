@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bandera.css">
+    <link rel="shortcut icon" href="Logo pagina transparente.png" type="image/x-icon"> 
+    <script src="https://kit.fontawesome.com/95afe0913c.js" crossorigin="anonymous"></script>
+    <title>Adivina el elemento</title>
+</head>
+<body>
+     <!--Menú de navegación-->
+
+     <header>
+        <nav>
+            <ul class="menu-horizontal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Media Técnica.html">Media Técnica</a>
+                    <ul class="menu-vertical">
+                        <li><a href="sistemas.html">Sistemas</a></li>
+                        <li><a href="IOT.html">IOT</a></li>
+                        <li><a href="diseño.html">Diseño gráfico y artes</a></li>
+                    </ul>
+                </li>
+                <li><a href="Biblioteca.html">Biblioteca</a>
+                    
+                </li>
+                <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                <li><a target="_blank" href="https://forms.gle/Dzy98RF3osamw3nDA">Registrate</a></li>
+
+                <li><a href="#">Juegos</a>
+                    <ul class="menu-vertical">
+                        <li><a href="memorama.html">Memorama</a></li>
+                        <li><a href="Banderas.html">Adivina el Elemento</a></li>
+                        <li><a href="pasapalabra.html">Pasa la Palabra</a></li>
+                        <li><a href="ahorcado.html">Ahorcado</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <br><br><br><br><br><br><br><br>
+
+
+    <!--Adivina el elemento-->
+       <h1>ADIVINA EL ELEMENTO</h1>
+
+    <!-- Pantalla inicial -->
+    <div id="pantalla-inicial">
+        <p>¿Cómo se llama este elemento?</p>
+        <button class="btn" onclick="comenzarJuego()">COMENZAR A JUGAR</button>
+    </div>
+
+    <!-- Pantalla juego -->
+    <div class="pantalla-juego" id="pantalla-juego">
+        <img src="Imagenes/ro.png" alt="" id="imgBandera">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">OPCION A</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">OPCION B</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">OPCION C</div>
+            </div>
+        </div>
+    </div>
+    <!-- Pantalla final -->
+    <div id="pantalla-final">
+        <h2>CORRECTAS: <span id="numCorrectas">3</span></h2>
+        <h2>INCORRECTAS: <span id="numIncorrectas">2</span></h2>
+        <button class="btn" onclick="volverAlInicio()">VOLVER AL INICIO</button>
+    </div>
+
+    <script src="componenete.js"></script>
+</body>
+</html>

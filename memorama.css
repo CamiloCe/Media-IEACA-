@@ -1,0 +1,176 @@
+/*Menu de navegación*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 900;
+  height: 120px;
+  background-color: rgb(0, 0, 0);
+}
+
+nav{
+  max-width: 900px;
+  margin: auto;
+  font-size: 22px;
+  margin-top: 50px;
+}
+
+.menu-horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-horizontal > li > a{
+  display: block;
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.menu-horizontal > li:hover{
+  background-color: rgb(216, 4, 4);
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+.menu-vertical {
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 190px;
+  background-color: rgba(0, 0, 0, 0.329);
+}
+
+.menu-horizontal li:hover .menu-vertical{
+  display: block;
+}
+
+.menu-vertical li:hover{
+  background-color: black;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+.menu-vertical li a{
+  display: block;
+  color: white;
+  padding: 15px 15px 20px;
+  text-decoration: none;
+}
+
+.content {
+  margin-top: 120px; /* Ajusta este valor para evitar que el contenido se superponga con el menú */
+
+}
+
+/*Memorama*/
+
+:root {
+    --w: calc(70vw / 6);
+    --h: calc(70vh / 4);
+}
+
+* {
+    transition: all 0.5s;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    -webkit-perspective: 1000;
+    background: rgb(9, 31, 226);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div {
+    display: inline-block;
+}
+
+.area-tarjeta,
+.tarjeta,
+.cara {
+    cursor: pointer;
+    width: var(--w);
+    min-width: 100px;
+    height: var(--h);
+}
+
+.tarjeta {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: iniciar 5s;
+}
+
+.cara {
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: inset 0 0 0 5px white;
+    font-size: 500%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trasera {
+    background-color: lightcyan;
+    transform: rotateY(180deg);
+}
+
+.superior {
+    background: linear-gradient(red, darkred);
+}
+
+.nuevo-juego {
+    cursor: pointer;
+    background: linear-gradient(red, darkred);
+    padding: 20px;
+    border-radius: 50px;
+    border: white 5px solid;
+    font-size: 130%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nuevo-juego:hover{
+    color: blue;
+}
+@keyframes iniciar {
+
+    20%,
+    90% {
+        transform: rotateY(180deg);
+    }
+
+    0%,
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+/*Titulo del memorama*/
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif,serif;
+    font-size: 40px;
+    color: black;
+}
+
+h1::first-letter{
+    font-size: 60px;
+}

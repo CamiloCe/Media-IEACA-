@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasa-Palabra</title>
+    <link rel="stylesheet" href="pasapalabra.css" />
+    <link rel="shortcut icon" href="Logo pagina transparente.png" type="image/x-icon"> 
+    <script src="https://kit.fontawesome.com/95afe0913c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <!--Navegación-->
+     <header>
+        <nav>
+            <ul class="menu-horizontal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Media Técnica.html">Media Técnica</a>
+                    <ul class="menu-vertical">
+                        <li><a href="sistemas.html">Sistemas</a></li>
+                        <li><a href="IOT.html">IOT</a></li>
+                        <li><a href="diseño.html">Diseño gráfico y artes</a></li>
+                    </ul>
+                </li>
+                <li><a href="Biblioteca.html">Biblioteca</a>
+                </li>
+                <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                <li><a target="_blank" href="https://forms.gle/Dzy98RF3osamw3nDA">Registrate</a></li>
+
+                <li><a href="#">Juegos</a>
+                    <ul class="menu-vertical">
+                        <li><a href="memorama.html">Memorama</a></li>
+                        <li><a href="Banderas.html">Adivina el Elemento </a></li>
+                        <li><a href="pasapalabra.html">Pasa la Palabra</a></li>
+                        <li><a href="ahorcado.html">Ahorcado</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<br><br><br><br><br><br>
+    <section id="pantalla-inicial">
+        <h1>PASA LA PALABRA</h1>
+        <button id="comenzar">COMENZAR JUEGO</button>
+    </section>
+    <section id="pantalla-juego">
+        <div class="container">
+            <span id="tiempo">120s</span>
+        </div>
+    
+        <div class="contendor-pregunta">
+            <span id="letra-pregunta">Z</span>
+            <h2 id="pregunta">Pregunta...</h2>
+            <input type="text" id="respuesta">
+            <div class="botones">
+                <button id="responder">Responder</button>
+                <button id="pasar">Pasa Palabra</button>
+            </div>
+        </div>
+    </section>
+    <section id="pantalla-final">
+        <h1>Resumen</h1>
+        <h3>Acertadas</h3>
+        <span id="acertadas">
+            10
+        </span>
+        <h3 id="score">50% de acierto</h3>
+        <button id="recomenzar">Jugar de Nuevo</button>
+    </section>
+<br>
+<p>A la hora de escribir las respuestas, escríbelas todas en minúsculas y sin signos de puntuación</p>
+<br><br>
+    <script src="pasapalabra.js"></script>
+
+</body>
+</html>
